@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:ital,wght@0,300;0,700;1,300&family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300&display=swap');
+
+.homeBase{
+    display: flex;
+    height: 99vh;
+    align-items: center;
+    /* align-items: flex-end; */
+}
+
+.homeBase h1{
+    font-size: 4rem;
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-weight: 600;
+    width: 100vw;
+    color: white;
+    background-color: black;
+}
