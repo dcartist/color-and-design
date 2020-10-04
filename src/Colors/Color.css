@@ -1,4 +1,10 @@
 .colorBase{
+    margin: 5px 10px;
     display: grid;
-    grid-template-columns: repeat(8, 1fr);
+    grid-template-columns: repeat(5, 1fr);
+    grid-column-gap: 5px;
+    /* display: flex; */
+    /* flex-direction: column; */
+    /* flex-wrap: wrap; */
+    /* flex-flow: row wrap; */
 }

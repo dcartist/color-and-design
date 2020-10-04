@@ -1,6 +1,6 @@
 import React from 'react'
 import { Button, Header, Image, Modal } from 'semantic-ui-react'
-
+import '../Card/Card.css'
 function ModalExampleModal(props) {
   const [open, setOpen] = React.useState(false)
 
@@ -14,7 +14,7 @@ function ModalExampleModal(props) {
     >
       <Modal.Header>Select a Photo</Modal.Header>
       <Modal.Content image>
-        {/* <div></div> */}
+      <div className="modalcolorBackground" style={{backgroundColor: props.hex}}></div>
         <Modal.Description>
   <Header>{props.name}</Header>
           <p>
@@ -25,11 +25,11 @@ function ModalExampleModal(props) {
         </Modal.Description>
       </Modal.Content>
       <Modal.Actions>
-        <Button color='black' onClick={() => setOpen(false)}>
+        {/* <Button color='black' onClick={() => setOpen(false)}>
           Nope
-        </Button>
+        </Button> */}
         <Button
-          content="Yep, that's me"
+          content="Done"
           labelPosition='right'
           icon='checkmark'
           onClick={() => setOpen(false)}
