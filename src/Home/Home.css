@@ -2,7 +2,7 @@
 
 .homeBase{
     display: flex;
-    height: 99vh;
+    height: 100vh;
     align-items: center;
     /* align-items: flex-end; */
 }
