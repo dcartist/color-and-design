@@ -8,6 +8,9 @@ width: 100%;
 display: block;
 }
 
+.displayedCard{
+    padding:5px;
+}
 Card{
     width: 90%;
     margin: 0;
@@ -20,7 +23,8 @@ h1  {
     font-weight: 500 !important;
     font-size: 19px !important;
     padding-left: 10px;
+    
 }
 .modalSpacing {
-    margin-left: 20px;
+    
 }

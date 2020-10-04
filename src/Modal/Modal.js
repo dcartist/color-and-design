@@ -9,7 +9,7 @@ function ModalExampleModal(props) {
       onClose={() => setOpen(false)}
       onOpen={() => setOpen(true)}
       open={open}
-      trigger={<Button>More info</Button>}
+      trigger={<Button  color="black">More info</Button>}
       size='fullscreen'
     >
       <Modal.Header>Select a Photo</Modal.Header>
