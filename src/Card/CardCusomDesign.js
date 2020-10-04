@@ -6,7 +6,7 @@ const CardCustomDesign = (props) => (
     <div style={{backgroundColor: props.hex}}>
         <div className="colorBackground"></div>
         <h1>{props.name}</h1>
-        <Modal {...props}></Modal>
+        <Modal {...props} className="modalSpacing"></Modal>
     </div>
   )
   
