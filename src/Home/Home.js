@@ -8,7 +8,7 @@ class Home extends Component {
         // console.log(randomColor)
         return (
             <div className="homeBase" style={{backgroundColor: randomColor}}>
-                <h1>COLOR AND DEISGN</h1>
+                <h1>COLOR <span className="thinnerAnd">AND</span> DESIGN</h1>
             </div>
         );
     }

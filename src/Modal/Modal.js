@@ -3,13 +3,20 @@ import { Button, Header, Image, Modal } from 'semantic-ui-react'
 import '../Card/Card.css'
 function ModalExampleModal(props) {
   const [open, setOpen] = React.useState(false)
+  const modalcolor = {
+    'backgroundColor':"black",
+    'color':"white",
+    'width':"100%",
+    'margin-bottom': "20px",
+    'borderRadius': "0"
 
+  }
   return (
     <Modal
       onClose={() => setOpen(false)}
       onOpen={() => setOpen(true)}
       open={open}
-      trigger={<Button  color="black">More info</Button>}
+      trigger={<Button style={modalcolor} >More info</Button>}
       size='fullscreen'
     >
       <Modal.Header>Select a Photo</Modal.Header>

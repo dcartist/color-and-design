@@ -10,21 +10,21 @@ display: block;
 
 .displayedCard{
     padding:5px;
+    padding-bottom: 20px;
 }
-Card{
-    width: 90%;
-    margin: 0;
-}
-.cardTitle  {
+
+.cardTitle {
     background-color: black;
     color: white;
+    text-align: center;
     width: 100%;
-    font-family: 'Open Sans', sans-serif !important;
-    font-weight: 500 !important;
-    font-size: 19px !important;
-    padding-left: 10px;
+    /* font-family: 'Open Sans', sans-serif; */
+    /* font-weight: 500 !important;
+    font-size: 19px !important; */
+    /* padding-left: 10px; */
     
 }
-.modalSpacing {
-    
+
+button {
+    background-color: black;
 }
