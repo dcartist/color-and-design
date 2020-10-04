@@ -15,7 +15,7 @@ Card{
     width: 90%;
     margin: 0;
 }
-h1  {
+.cardTitle  {
     background-color: black;
     color: white;
     width: 100%;
