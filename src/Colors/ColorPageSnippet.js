@@ -3,7 +3,7 @@ import Modal from "../Modal/Modal"
 import Cards from "../Card/CardCusomDesign"
 import axios from 'axios';
 import "./Color.css"
-class ColorPage extends Component {
+class ColorPageAlphabet extends Component {
     constructor(props){
         super(props)
         this.state={
@@ -11,10 +11,9 @@ class ColorPage extends Component {
         }
       }
     componentDidMount(){
-    // console.log(this.props.match.params.pageNumber)
-    console.log(this.props.location.pathname)
+    console.log(this.props.match.params.pageNumber)
     console.log("testing")
-    let url = `https://flask.colorand.design/colors/full/${this.props.match.params.pageNumber}`
+    let url = `https://flask.colorand.design/colors/snippet/${this.props.match.params.snippet}`
         axios.get(url).then(
             results=> {
                 this.setState({color:results.data})
@@ -37,4 +36,4 @@ class ColorPage extends Component {
 }
 
 
-export default ColorPage;
+export default ColorPageAlphabet;
