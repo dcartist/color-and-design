@@ -11,6 +11,17 @@ function ModalExampleModal(props) {
     'borderRadius': "0"
 
   }
+  const cardStyle= {
+    'backgroundColor': 'black',
+    'textAlign':"center",
+    'color': 'white',
+    'width': '100%',
+    'padding': "5px",
+    'fontFamily': "'Open Sans', sans-serif",
+    'fontWeight': '600',
+    'marginBottom': '20px',
+    'fontSize': "18px"
+}
   return (
     <Modal
       onClose={() => setOpen(false)}
@@ -19,28 +30,23 @@ function ModalExampleModal(props) {
       trigger={<Button style={modalcolor} >More info</Button>}
       size='fullscreen'
     >
-      <Modal.Header>Select a Photo</Modal.Header>
-      <Modal.Content image>
-      <div className="modalcolorBackground" style={{backgroundColor: props.hex}}></div>
-        <Modal.Description>
-  <Header>{props.name}</Header>
-          <p>
-            We've found the following gravatar image associated with your e-mail
-            address.
-          </p>
-          <p>Is it okay to use this photo?</p>
-        </Modal.Description>
-      </Modal.Content>
+      <Modal.Header><div className="modalcolorBackground1" style={{backgroundColor: props.hex}}>
+      <div style={cardStyle}>
+        {props.name}
+        <p>hex: {props.hex} &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; rgb: {props.rgb} </p>
+        </div>
+ 
+        </div></Modal.Header>
       <Modal.Actions>
         {/* <Button color='black' onClick={() => setOpen(false)}>
           Nope
         </Button> */}
         <Button
           content="Done"
+          color='black'
           labelPosition='right'
-          icon='checkmark'
+          icon='paint brush'
           onClick={() => setOpen(false)}
-          positive
         />
       </Modal.Actions>
     </Modal>

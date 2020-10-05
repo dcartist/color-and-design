@@ -7,6 +7,16 @@ height: 80px;
 width: 100%;
 display: block;
 }
+.modalcolorBackground1 {
+height: 180px;
+width: 100%;
+display: flex;
+align-items: flex-end;
+flex-wrap: wrap;
+margin-bottom: 20px;
+/* display: block; */
+
+}
 
 .displayedCard{
     padding:5px;
