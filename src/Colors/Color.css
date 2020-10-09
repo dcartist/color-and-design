@@ -5,3 +5,13 @@
     grid-column-gap: 5px;
     grid-row-gap: 10px;
 }
+
+.PaginationCenter{
+    margin: auto;
+    width: 100%;
+    display: flex;
+    /* background-color: black; */
+    padding: 15px 0;
+    align-self: center;
+    justify-content: center;
+}
