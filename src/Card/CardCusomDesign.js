@@ -1,5 +1,6 @@
 import React from 'react'
 import Modal from "../Modal/Modal"
+import 'semantic-ui-css/semantic.min.css'
 import './Card.css'
 
 const cardStyle= {
