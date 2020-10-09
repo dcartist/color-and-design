@@ -6,33 +6,21 @@ import axios from 'axios';
 import "./Color.css"
 
 class ColorMainPage extends Component {
- state = { activePage: 0,
+ state = { activePage: 1,
     activeSelection:"",
     color:[] }
-  handleInputChange = (e, { value }) => {
-    e.preventDefault();
-    this.setState({ activePage: value })
-    let url = `https://flask.colorand.design/colors/full/${this.state.activePage}`
-        axios.get(url).then(
-            results=> {
-                this.setState({color:results.data})
-                console.log(this.state.color)
-                console.log(results.data)
-                console.log("test")
-            }
-        )
 
-  }
   handlePaginationChange = (e, { activePage }) => {
-    e.preventDefault();
+    // e.preventDefault();
     this.setState({ activePage: activePage })
     let url = `https://flask.colorand.design/colors/full/${this.state.activePage}`
         axios.get(url).then(
             results=> {
                 this.setState({color:results.data})
-                console.log(this.state.color)
+                console.log(this.state.color[0].id)
                 console.log(results.data)
-                console.log("test")
+                console.log("pagination Change")
+                console.log(this.state.activePage)
             }
         )
 

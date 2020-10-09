@@ -11,23 +11,23 @@ class ColorPage extends Component {
           color:[]
         }
       }
-    componentDidMount(){
-    // console.log(this.props.match.params.pageNumber)
-    // console.log(this.props.location.pathname)
-    console.log("testing")
-    let url = `https://flask.colorand.design/colors/full/${this.props.activeSelection}`
-        axios.get(url).then(
-            results=> {
-                this.setState({color:results.data})
-                console.log(this.state.color)
-                console.log(results.data)
-                console.log("test")
-            }
-        )
-    }
+    // componentDidMount(){
+    // // console.log(this.props.match.params.pageNumber)
+    // // console.log(this.props.location.pathname)
+    // console.log("testing")
+    // let url = `https://flask.colorand.design/colors/full/${this.props.activeSelection}`
+    //     axios.get(url).then(
+    //         results=> {
+    //             this.setState({color:results.data})
+    //             console.log(this.state.color)
+    //             console.log(results.data)
+    //             console.log("test")
+    //         }
+    //     )
+    // }
 
     render() {
-        if (this.state.color.length == 0){
+        if (this.props.color.length == 0){
 return(
 <Loader></Loader>
 )
