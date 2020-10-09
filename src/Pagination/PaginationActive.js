@@ -2,37 +2,47 @@ import React, { Component } from 'react'
 import { Grid, Input, Pagination, Segment } from 'semantic-ui-react'
 
 export default class PaginationExampleControlled extends Component {
-  state = { activePage: 1 }
+  // constructor(props){
+  //   super()
+  //   this.state = { activePage: 1 }
+  // }
 
-  handleInputChange = (e, { value }) => this.setState({ activePage: value })
+  // handleInputChange = (e, { value }) => this.setState({ activePage: value })
 
-  handlePaginationChange = (e, { activePage }) => this.setState({ activePage })
+  // handlePaginationChange = (e, { activePage }) => this.setState({ activePage })
 
   render() {
-    const { activePage } = this.state
+    // const { activePage } = this.state
 
     return (
       <Grid columns={2} verticalAlign='middle'>
-        <Grid.Column>
+        {/* <Grid.Column>
           <Segment secondary>
-            <div>activePage: {activePage}</div>
+            <div>activePage: {this.props.activePage}</div>
             <Input
               min={1}
               max={5}
-              onChange={this.handleInputChange}
+              onChange={this.props.handleInputChange}
               type='range'
-              value={activePage}
+              value={this.props.activePage}
             />
           </Segment>
-        </Grid.Column>
+        </Grid.Column> */}
         <Grid.Column>
           <Pagination
-            activePage={activePage}
-            onPageChange={this.handlePaginationChange}
-            totalPages={5}
+            activePage={this.props.activePage}
+            onPageChange={this.props.handlePaginationChange}
+            totalPages={24}
           />
         </Grid.Column>
       </Grid>
     )
   }
 }
+
+
+// function PaginationExampleControlled (props) {
+//   return <div className='message-box'>
+//     Hello {name}
+//   </div>
+// }

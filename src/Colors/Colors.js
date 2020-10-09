@@ -3,6 +3,7 @@ import Modal from "../Modal/Modal"
 import Cards from "../Card/CardCusomDesign"
 import axios from 'axios';
 import "./Color.css"
+
 class Colors extends Component {
     constructor(){
         super()

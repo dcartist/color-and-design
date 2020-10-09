@@ -1,5 +1,5 @@
 import React from 'react'
-import Modal from "../Modal/Modal"
+import Modal from "../Modal/Modalboot"
 import 'semantic-ui-css/semantic.min.css'
 import './Card.css'
 

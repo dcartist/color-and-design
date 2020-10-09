@@ -21,6 +21,12 @@ margin-bottom: 20px;
 .displayedCard{
     padding:5px;
     padding-bottom: 20px;
+    margin: 20px;
+}
+
+.displayedCard Modal {
+    background-color: black;
+    margin: auto;
 }
 
 .cardTitle {
