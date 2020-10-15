@@ -1,0 +1,8 @@
+.LoadingPage{
+    height: 99vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* background-color: red; */
+}

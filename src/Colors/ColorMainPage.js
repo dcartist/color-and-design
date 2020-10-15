@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import PaginationActive from '../Pagination/PaginationActive'
 import Modal from '../Modal/Modalboot'
+import Loader from "../Loader/Loader"
 import FullColor from '../Colors/ColorFullSelector'
 import axios from 'axios';
 import "./Color.css"
@@ -37,17 +38,26 @@ class ColorMainPage extends Component {
     }
 
     render() {
-        return (
-            <div>
-                <div className="PaginationCenter">
-                <PaginationActive activePage={this.state.activePage} handleInputChange={this.handleInputChange} handlePaginationChange={this.handlePaginationChange} ></PaginationActive>
+        if (this.state.color.length == 0){
+            return(
+                <div className="PageLoader">
+                    <Loader></Loader>
                 </div>
-                
-                <FullColor activeSelection={this.state.activePage} color={this.state.color}></FullColor>
+            )
+        }else {
 
-                {/* <Modal></Modal> */}
-            </div>
-        );
+            return (
+                <div>
+                    <div className="PaginationCenter">
+                    <PaginationActive activePage={this.state.activePage} handleInputChange={this.handleInputChange} handlePaginationChange={this.handlePaginationChange} ></PaginationActive>
+                    </div>
+                    
+                    <FullColor activeSelection={this.state.activePage} color={this.state.color}></FullColor>
+    
+                    {/* <Modal></Modal> */}
+                </div>
+            );
+        }
     }
 }
 

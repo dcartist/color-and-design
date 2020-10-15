@@ -1,8 +1,9 @@
 import React from 'react'
+import "./Loader.css"
 import { Dimmer, Loader, Image, Segment } from 'semantic-ui-react'
 
 const Loaders = () => (
-  <div>
+  <div className="LoadingPage">
     <Segment>
       <Dimmer active inverted>
         <Loader size='large'>Loading</Loader>
