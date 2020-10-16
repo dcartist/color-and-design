@@ -4,6 +4,7 @@ import Modal from '../Modal/Modalboot'
 import Loader from "../Loader/Loader"
 import FullColor from '../Colors/ColorFullSelector'
 import axios from 'axios';
+
 import "./Color.css"
 
 class ColorMainPage extends Component {
@@ -55,6 +56,7 @@ class ColorMainPage extends Component {
 
             return (
                 <div>
+                    
                     <div className="PaginationCenter">
                     <PaginationActive activePage={this.state.activePage} handleInputChange={this.handleInputChange} handlePaginationChange={this.handlePaginationChange} ></PaginationActive>
                     </div>
