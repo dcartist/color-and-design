@@ -7,21 +7,24 @@ import axios from 'axios';
 import "./Color.css"
 
 class ColorMainPage extends Component {
- state = { activePage: 1,
+ state = { activePage: 0,
     activeSelection:"",
     color:[] }
 
   handlePaginationChange = (e, { activePage }) => {
     // e.preventDefault();
+    let urlPage = activePage - 1
     this.setState({ activePage: activePage })
-    let url = `https://flask.colorand.design/colors/full/${this.state.activePage}`
+    
+    let url = `https://flask.colorand.design/colors/full/${urlPage}`
+    console.log(`before axios call active page change to ${this.state.activePage} URL is ${url}`)
         axios.get(url).then(
             results=> {
                 this.setState({color:results.data})
                 console.log(this.state.color[0].id)
                 console.log(results.data)
-                console.log("pagination Change")
-                console.log(this.state.activePage)
+                console.log(`Post pagination active page change to ${this.state.activePage} URL is ${url}`)
+                // console.log(this.state.activePage)
             }
         )
 
@@ -33,6 +36,7 @@ class ColorMainPage extends Component {
         axios.get(url).then(
             results=> {
                 this.setState({color:results.data})
+                console.log(`Post Mounted active page change to ${this.state.activePage} URL is ${url} `)
             }
         )
     }

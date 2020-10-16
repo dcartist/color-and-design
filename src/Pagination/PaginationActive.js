@@ -32,7 +32,7 @@ export default class PaginationExampleControlled extends Component {
           <Pagination
             activePage={this.props.activePage}
             onPageChange={this.props.handlePaginationChange}
-            totalPages={24}
+            totalPages={26}
           />
         </Grid.Column>
       </Grid>

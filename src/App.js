@@ -25,7 +25,7 @@ class App extends Component {
   render() {
     return (
       <div>
-  {/* <Navigation></Navigation> */}
+  <Navigation></Navigation>
         <Route exact path="/">
         <Home />
       </Route>
