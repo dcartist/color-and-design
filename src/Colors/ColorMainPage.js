@@ -9,6 +9,9 @@ import "./Color.css"
 class ColorMainPage extends Component {
  state = { activePage: 0,
     activeSelection:"",
+    showEllipsis: true,
+    showFirstAndLastNav: true,
+    showPreviousAndNextNav: true,
     color:[] }
 
   handlePaginationChange = (e, { activePage }) => {

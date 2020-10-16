@@ -6,6 +6,15 @@ export default class PaginationExampleControlled extends Component {
   //   super()
   //   this.state = { activePage: 1 }
   // }
+  state = {
+    // activePage: 5,
+    boundaryRange: 2,
+    siblingRange: 2,
+    showEllipsis: true,
+    showFirstAndLastNav: true,
+    showPreviousAndNextNav: true,
+    // totalPages: 50,
+  }
 
   // handleInputChange = (e, { value }) => this.setState({ activePage: value })
 
@@ -13,6 +22,13 @@ export default class PaginationExampleControlled extends Component {
 
   render() {
     // const { activePage } = this.state
+    const {
+      boundaryRange,
+      siblingRange,
+      showEllipsis,
+      showFirstAndLastNav,
+      showPreviousAndNextNav,
+    } = this.state
 
     return (
       <Grid columns={2} verticalAlign='middle'>
@@ -33,6 +49,12 @@ export default class PaginationExampleControlled extends Component {
             activePage={this.props.activePage}
             onPageChange={this.props.handlePaginationChange}
             totalPages={26}
+            siblingRange={siblingRange}
+            ellipsisItem={showEllipsis ? undefined : null}
+            firstItem={showFirstAndLastNav ? undefined : null}
+            lastItem={showFirstAndLastNav ? undefined : null}
+            prevItem={showPreviousAndNextNav ? undefined : null}
+            nextItem={showPreviousAndNextNav ? undefined : null}
           />
         </Grid.Column>
       </Grid>
