@@ -52,3 +52,7 @@ body{
   margin: 0;
   /* background-color: black; */
 }
+
+.colorbody{
+  height: 100vh;
+}

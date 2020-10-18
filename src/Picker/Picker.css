@@ -1,0 +1,12 @@
+.pickerbody{
+    display: inline;
+    height: 100vh;
+    width: 10%;
+}
+
+
+.picker{
+    height: 100vh;
+    width: 100%;
+}
+

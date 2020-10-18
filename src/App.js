@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
-import ColorPicker from "./Colors/ColorPicker"
+import ColorPicker from "./Picker/Picker"
+// import ColorPicker from "./Colors/ColorPicker"
 import 'semantic-ui-css/semantic.min.css'
-// import "./App.css"
+import "./App.css"
 import {Route, Link, Switch, Redirect} from "react-router-dom";
 import Home from './Home/Home'
 import Colors from './Colors/Colors'
@@ -24,7 +25,7 @@ class App extends Component {
 
   render() {
     return (
-      <div>
+      <div className="colorbody">
   <Navigation></Navigation>
         <Route exact path="/">
         <Home />
