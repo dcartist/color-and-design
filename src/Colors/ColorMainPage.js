@@ -46,7 +46,7 @@ class ColorMainPage extends Component {
         if(e.keyCode == 13 && e.shiftKey == false) {
             e.preventDefault()
             if (this.state.searchInput.length == 0){
-                this.setState({searchSelected: true, errorMessage: ""})
+                this.setState({searchSelected: true, errorMessage: "", activePage:0})
                 let url = `https://flask.colorand.design/colors/full/${this.state.activePage}`;
 		axios.get(url).then((results) => {
 			this.setState({ color: results.data });
