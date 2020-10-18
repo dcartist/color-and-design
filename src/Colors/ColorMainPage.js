@@ -63,7 +63,6 @@ class ColorMainPage extends Component {
 			console.log(`Post Mounted active page change to ${this.state.activePage} URL is ${url} `);
 		});
 	}
-
 	render() {
 		if (this.state.color.length == 0) {
 			return (
