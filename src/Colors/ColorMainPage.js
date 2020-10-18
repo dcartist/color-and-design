@@ -27,9 +27,19 @@ class ColorMainPage extends Component {
 		});
 	};
 	handleInput = (e) => {
-		// e.preventDefault()
-		this.setState({ searchSelected: false, searchInput: e.target.value });
-	};
+		e.preventDefault()
+        this.setState({ searchSelected: false, searchInput: e.target.value });
+           
+    };
+    handleEnter = (e) => {
+        // if (e.key === 'Enter') {
+        //     this.handleSearch()
+        //   }
+        if(e.keyCode == 13 && e.shiftKey == false) {
+            e.preventDefault()
+            this.handleSearch()
+          }
+    }
 	handlePaginationChange = (e, { activePage }) => {
 		// e.preventDefault()
 		let urlPage = activePage - 1;
@@ -65,10 +75,8 @@ class ColorMainPage extends Component {
 			return (
 				<div>
                     <div className="SearchFunction">
-							<form>
-								<input type="text" onChange={this.handleInput} />
-							</form>
-							<button onClick={this.handleSearch}>Click here</button>
+								<input type="text" onChange={this.handleInput} onKeyDown={this.handleEnter} />
+							<button onClick={this.handleSearch}>Find the color!</button>
 						</div>
 					<div className="PaginationCenter">
 						<PaginationActive
