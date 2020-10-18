@@ -89,12 +89,12 @@ class ColorMainPage extends Component {
                     <div className="PaginationCenter">
                     <PaginationActive activePage={this.state.activePage} handleInputChange={this.handleInputChange} handlePaginationChange={this.handlePaginationChange} ></PaginationActive>
                     </div>
-{/*                     
+                    
                     <div className="PaginationCenter">
                     <PaginationActive activePage={this.state.activePage} handleInputChange={this.handleInputChange} handlePaginationChange={this.handlePaginationChange} ></PaginationActive>
                     </div>
                     
-                    <FullColor activeSelection={this.state.activePage} color={this.state.color}></FullColor> */}
+                    <FullColor activeSelection={this.state.activePage} color={this.state.color}></FullColor>
     
                 </div>
             );
