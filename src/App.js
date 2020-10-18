@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+import ColorPicker from "./Colors/ColorPicker"
 import 'semantic-ui-css/semantic.min.css'
 // import "./App.css"
 import {Route, Link, Switch, Redirect} from "react-router-dom";
@@ -31,6 +31,9 @@ class App extends Component {
       </Route>
         <Route exact path="/colors">
         <Colors />
+      </Route>
+        <Route exact path="/colorpicker">
+        <ColorPicker />
       </Route>
         <Route exact path="/about">
         <About />
