@@ -23,9 +23,12 @@ class ColorMainPage extends Component {
 		console.log(url);
 		axios.get(url).then((results) => {
             this.setState({ color: results.data });
-            if (results.data.length == 0){
+            if (results.data.length == 0 && this.state.searchSelected == false){
                 this.setState({errorMessage: "Sorry but no color found", searchSelected: true})
-            } else {
+            } else if (results.data.length == 0 && this.state.searchSelected ) {
+                this.setState({errorMessage: "", searchSelected:false})
+            }
+             else {
                 this.setState({errorMessage: "", searchSelected:false})
             }
 			// console.log(this.state.color[0].id);
@@ -42,7 +45,17 @@ class ColorMainPage extends Component {
        
         if(e.keyCode == 13 && e.shiftKey == false) {
             e.preventDefault()
-            this.handleSearch()
+            if (this.state.searchInput.length == 0){
+                this.setState({searchSelected: true, errorMessage: ""})
+                let url = `https://flask.colorand.design/colors/full/${this.state.activePage}`;
+		axios.get(url).then((results) => {
+			this.setState({ color: results.data });
+			console.log(`Post Mounted active page change to ${this.state.activePage} URL is ${url} `);
+		});
+            } else{
+                this.handleSearch()
+            }
+           
           }
     }
 	handlePaginationChange = (e, { activePage }) => {
