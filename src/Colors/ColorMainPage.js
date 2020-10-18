@@ -1,15 +1,17 @@
-import React, { Component } from 'react';
-import PaginationActive from '../Pagination/PaginationActive';
-import Loader from '../Loader/Loader';
-import FullColor from '../Colors/ColorFullSelector';
-import axios from 'axios';
-import './Color.css';
+import React, { Component } from 'react'
+import PaginationActive from '../Pagination/PaginationActive'
+import FullColor from '../Colors/ColorFullSelector'
+import Loader from '../Loader/Loader'
+import axios from 'axios'
+import './Color.css'
 
 class ColorMainPage extends Component {
+    
 	state = {
 		activePage: 0,
 		searchSelected: false,
-		searchInput: '',
+        searchInput: '',
+        errorMessage:"",
 		activeSelection: '',
 		showEllipsis: true,
 		showFirstAndLastNav: true,
@@ -20,9 +22,14 @@ class ColorMainPage extends Component {
 		let url = `https://flask.colorand.design/colors/snippet/${this.state.searchInput}`;
 		console.log(url);
 		axios.get(url).then((results) => {
-			this.setState({ color: results.data });
-			console.log(this.state.color[0].id);
-			console.log(results.data);
+            this.setState({ color: results.data });
+            if (results.data.length == 0){
+                this.setState({errorMessage: "Sorry but no color found", searchSelected: true})
+            } else {
+                this.setState({errorMessage: "", searchSelected:false})
+            }
+			// console.log(this.state.color[0].id);
+			console.log(results.data.length);
 			console.log(`Post pagination active page change to ${this.state.activePage} URL is ${url}`);
 		});
 	};
@@ -32,9 +39,7 @@ class ColorMainPage extends Component {
            
     };
     handleEnter = (e) => {
-        // if (e.key === 'Enter') {
-        //     this.handleSearch()
-        //   }
+       
         if(e.keyCode == 13 && e.shiftKey == false) {
             e.preventDefault()
             this.handleSearch()
@@ -43,14 +48,12 @@ class ColorMainPage extends Component {
 	handlePaginationChange = (e, { activePage }) => {
 		// e.preventDefault()
 		let urlPage = activePage - 1;
-		this.setState({ activePage: activePage, searchSelected: true });
+		this.setState({ activePage: activePage, searchSelected: true, errorMessage: "" });
 
 		let url = `https://flask.colorand.design/colors/full/${urlPage}`;
 		console.log(`before axios call active page change to ${this.state.activePage} URL is ${url}`);
 		axios.get(url).then((results) => {
 			this.setState({ color: results.data });
-			console.log(this.state.color[0].id);
-			console.log(results.data);
 			console.log(`Post pagination active page change to ${this.state.activePage} URL is ${url}`);
 		});
 	};
@@ -64,7 +67,7 @@ class ColorMainPage extends Component {
 		});
 	}
 	render() {
-		if (this.state.color.length == 0) {
+		if (this.state.color.length == 0 && this.state.searchSelected == false) {
 			return (
 				<div className="PageLoader">
 					<Loader />
@@ -84,8 +87,13 @@ class ColorMainPage extends Component {
 							handlePaginationChange={this.handlePaginationChange}
 						/>
 					</div>
+                    <div className="ErrorSearch">
 
-					<FullColor activeSelection={this.state.activePage} color={this.state.color} />
+                        <h2>{this.state.errorMessage}</h2>
+                    </div>
+                  
+					<FullColor {...this.state} />
+					{/* <FullColor activeSelection={this.state.activePage} color={this.state.color} /> */}
 				</div>
 			);
 		}
