@@ -20,3 +20,21 @@
     height: 99vh;
     width: 100vw;
 }
+.SearchFunction{
+    margin: auto;
+    width: 100%;
+    display: flex;
+    /* background-color: black; */
+    /* padding: 15px 0; */
+    padding-top: 10px;
+    align-self: center;
+    justify-content: center;
+}
+
+.SearchFunction button{
+    background-color: grey;
+}
+.SearchFunction button, input{
+    padding: 10px;
+    margin: 0 5px;
+}
