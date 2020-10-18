@@ -68,9 +68,9 @@ class ColorMainPage extends Component {
                 <div>
                     
                     <div className="PaginationCenter">
-                        <form>
+                        {/* <form>
                             <input type="text" onChange={this.handleInput} value={this.state.searchInput}></input>
-                        </form>
+                        </form> */}
                     <PaginationActive activePage={this.state.activePage} handleInputChange={this.handleInputChange} handlePaginationChange={this.handlePaginationChange} ></PaginationActive>
                     </div>
                     
@@ -82,10 +82,10 @@ class ColorMainPage extends Component {
 
             return (
                 <div>
-                    This is false
+                    {/* This is false
                      <form>
                             <input type="text"></input>
-                        </form>
+                        </form> */}
                     <div className="PaginationCenter">
                     <PaginationActive activePage={this.state.activePage} handleInputChange={this.handleInputChange} handlePaginationChange={this.handlePaginationChange} ></PaginationActive>
                     </div>
