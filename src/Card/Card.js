@@ -1,19 +1,26 @@
 import React from 'react'
-import { Card, Icon} from 'semantic-ui-react'
-import './Card.css'
 import Modal from "../Modal/Modal"
-const CardExampleImageCard = (props) => (
-  <Card fluid>
-      <div className="colorBackground" style={{backgroundColor: props.hex}}></div>
-    <Card.Content>
-<Card.Header>{props.name}</Card.Header>
+import 'semantic-ui-css/semantic.min.css'
+import './Card.css'
 
-    </Card.Content>
-    <Card.Content extra>
-      <Modal {...props}></Modal>
-     
-    </Card.Content>
-  </Card>
-)
-
-export default CardExampleImageCard
+const cardStyle= {
+    'backgroundColor': 'black',
+    'textAlign':"center",
+    'color': 'white',
+    'width': '100%',
+    'padding': "5px",
+    'fontFamily': "'Open Sans', sans-serif",
+    'fontWeight': '600',
+    'fontSize': "18px"
+}
+const CardCustomDesign = (props) => (
+    <div classname="displayedCard" style={{backgroundColor: props.hex}}>
+        <div className="colorBackground"></div>
+        <div style={cardStyle}>
+        {props.name}
+        </div>
+        <Modal {...props} className="modalSpacing"></Modal>
+    </div>
+  )
+  
+  export default CardCustomDesign

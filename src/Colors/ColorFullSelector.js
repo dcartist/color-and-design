@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
-import Cards from '../Card/CardCusomDesign';
+import Cards from '../Card/Card';
 import BackToTop from 'react-easy-back-to-top';
-
 import Painting from '../Image/2.png';
 import Loader from '../Loader/Loader';
 import './Color.css';
@@ -20,7 +19,7 @@ class ColorPage extends Component {
 		else if (this.props.color.length == 0 && this.props.searchSelected == true ) {
 			return (
 				<div className="ErrorSearch">
-					<img src={Painting} />
+					<img src={Painting} alt="Color Swatches" />
 				</div>
 			);
 		} else {

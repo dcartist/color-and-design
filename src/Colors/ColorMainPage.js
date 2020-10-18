@@ -106,7 +106,6 @@ class ColorMainPage extends Component {
                     </div>
                   
 					<FullColor {...this.state} />
-					{/* <FullColor activeSelection={this.state.activePage} color={this.state.color} /> */}
 				</div>
 			);
 		}

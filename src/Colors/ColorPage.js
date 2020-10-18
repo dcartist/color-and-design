@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Cards from "../Card/CardCusomDesign"
+import Cards from "../Card/Card"
 import axios from 'axios';
 import "./Color.css"
 class ColorPage extends Component {
