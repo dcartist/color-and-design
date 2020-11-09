@@ -13,10 +13,10 @@ class ColorPage extends Component {
 		};
 	}
 	render() {
-		if (this.props.color.length == 0 && this.props.errorMessage.length == 0) {
+		if (this.props.color.length === 0 && this.props.errorMessage.length === 0) {
 			return <Loader />;
 		}
-		else if (this.props.color.length == 0 && this.props.searchSelected == true ) {
+		else if (this.props.color.length === 0 && this.props.searchSelected === true ) {
 			return (
 				<div className="ErrorSearch">
 					<img src={Painting} alt="Color Swatches" />

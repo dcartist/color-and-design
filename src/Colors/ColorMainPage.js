@@ -23,9 +23,9 @@ class ColorMainPage extends Component {
 		console.log(url);
 		axios.get(url).then((results) => {
             this.setState({ color: results.data });
-            if (results.data.length == 0 && this.state.searchSelected == false){
+            if (results.data.length === 0 && this.state.searchSelected === false){
                 this.setState({errorMessage: "Sorry but no color found", searchSelected: true})
-            } else if (results.data.length == 0 && this.state.searchSelected ) {
+            } else if (results.data.length === 0 && this.state.searchSelected ) {
                 this.setState({errorMessage: "", searchSelected:false})
             }
              else {
@@ -43,9 +43,9 @@ class ColorMainPage extends Component {
     };
     handleEnter = (e) => {
        
-        if(e.keyCode == 13 && e.shiftKey == false) {
+        if(e.keyCode === 13 && e.shiftKey === false) {
             e.preventDefault()
-            if (this.state.searchInput.length == 0){
+            if (this.state.searchInput.length === 0){
                 this.setState({searchSelected: true, errorMessage: "", activePage:0})
                 let url = `https://flask.colorand.design/colors/full/${this.state.activePage}`;
 		axios.get(url).then((results) => {
@@ -80,7 +80,7 @@ class ColorMainPage extends Component {
 		});
 	}
 	render() {
-		if (this.state.color.length == 0 && this.state.searchSelected == false) {
+		if (this.state.color.length === 0 && this.state.searchSelected === false) {
 			return (
 				<div className="PageLoader">
 					<Loader />

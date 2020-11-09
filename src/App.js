@@ -20,6 +20,7 @@ class App extends Component {
   }
 
   render() {
+    console.log("Hi there!!!")
     return (
       <div className="colorbody">
         <Navigation />
