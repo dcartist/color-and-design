@@ -1,0 +1,15 @@
+.aboutBase{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    width: 50%;
+    min-height: 80vh;
+    margin: auto;
+    /* align-items: center; */
+    justify-content: center;
+}
+
+.aboutBase p {
+    margin: 25px 0;
+    font-size: 1.3rem;
+}
