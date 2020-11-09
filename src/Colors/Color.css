@@ -30,7 +30,8 @@
 }
 
 .SearchFunction button{
-    background-color: yellow;
+    background-color: black;
+    color: white;
 }
 .SearchFunction button, input{
     padding: 10px;
