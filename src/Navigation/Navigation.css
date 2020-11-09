@@ -6,3 +6,17 @@
 .navlink{
     color: white important!;
 }
+
+
+.navbar-light .navbar-toggler{
+    color: white;
+}
+
+/* .navbar-toggler{
+background-color: yellow;
+} */
+
+.navbar-toggler-icon{
+    -webkit-filter: brightness(10);
+  filter: brightness(10);
+}

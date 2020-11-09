@@ -7,7 +7,7 @@ class Navigation extends Component {
 		return (
 			<div>
 				{/* <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark" className="navBackground"> */}
-				<Navbar collapseOnSelect expand="lg" className="navBackground">
+				<Navbar collapseOnSelect expand="lg" className="navBackground" variant="dark" >
 					<Navbar.Brand href="/" style={{ color: 'white', textDecoration: 'none' }}>
 						Color and Design
 					</Navbar.Brand>
